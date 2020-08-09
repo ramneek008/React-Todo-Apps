@@ -13,10 +13,10 @@ const App = () => {
   const [todos, dispatch] = useReducer(todoReducer, []);
   return (
     <TodoContext.Provider value={{todos, dispatch}}>
-      <Container fluid>
-        <h1>Todo App with Context API</h1>
-        <Todos />
+      <Container>
+        <h1>Todo App</h1>
         <TodoForm />
+        <Todos />
       </Container>
     </TodoContext.Provider>
   );

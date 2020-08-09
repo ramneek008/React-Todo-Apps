@@ -9,7 +9,7 @@ const Todos = () => {
     const {todos, dispatch} = useContext(TodoContext);
 
     return(
-        <ListGroup className="mt-5 mb-2 items">
+        <ListGroup className="mt-5 mb-2 items" style={{position:'inherit', width:'60%', margin:'5px auto'}}>
             {todos.map(todo => (
                 <ListGroupItem key={todo.id}>
                     {todo.todoString}
