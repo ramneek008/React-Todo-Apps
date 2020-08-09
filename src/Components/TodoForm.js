@@ -1,7 +1,7 @@
 import React, {useState, useContext} from 'react';
 import {FormGroup, Form, Input, InputGroup, Button, InputGroupAddon} from 'reactstrap';
 import {v4} from 'uuid';
-import TodoContext from '../context/TodoContext';
+import {TodoContext} from '../context/TodoContext';
 import {ADD_TODO} from '../context/action.types';
 
 const TodoForm = () => {
@@ -17,7 +17,7 @@ const TodoForm = () => {
 
         const todo = {
             todoString,
-            id : v4();
+            id : v4()
         };
 
         dispatch({
