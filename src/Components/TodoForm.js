@@ -23,7 +23,7 @@ const TodoForm = () => {
         dispatch({
             type:ADD_TODO,
             payload: todo
-        })
+        });
 
         setTodoString("");
     } 
@@ -37,6 +37,8 @@ const TodoForm = () => {
                       name="todo"
                       id="todo"
                       placeholder = "Your next Todo"
+                      value={todoString}
+                      onChange={e => setTodoString(e.target.value)}
                     />
                     <InputGroupAddon addonType="prepend">
                         <Button
