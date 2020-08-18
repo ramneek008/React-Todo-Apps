@@ -10,6 +10,14 @@ const App = () => {
 
   const [todos, setTodos] = useState([]);
 
+  useEffect(() => {
+    const localTodos = localStorage.getItem("todos")
+    console.log({localStorage})
+    if(localTodos){
+      setTodos(JSON.parse(localTodos));
+    }
+  }, [])
+
   return(
     <Container fluid>
       <h1>Todo with Local Storage</h1>
