@@ -22,7 +22,7 @@ const TodoForm = ({addTodos}) => {
     }
     
     return(
-        <Form onSubmit={handleSubmit}>
+        <Form onSubmit={handleSubmit} style={{position:'inherit', width:'60%', margin:'50px auto'}}>
             <FormGroup>
                 <InputGroup>
                 <Input 

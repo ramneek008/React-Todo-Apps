@@ -33,8 +33,8 @@ const App = () => {
   return(
     <Container fluid>
       <h1>Todo with Local Storage</h1>
-      <Todos todos={todos} markComplete={markComplete} />
       <TodoForm addTodos={addTodos} />
+      <Todos todos={todos} markComplete={markComplete} />      
     </Container>
   );
 
