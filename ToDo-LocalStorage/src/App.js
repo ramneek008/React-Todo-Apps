@@ -16,7 +16,19 @@ const App = () => {
     if(localTodos){
       setTodos(JSON.parse(localTodos));
     }
-  }, [])
+  }, []);
+
+  const addTodos = async todo => {
+    setTodos([...todos, todo]);
+  }
+
+  useEffect(() => {
+    localStorage.setItem("todos", JSON.stringify(todos));
+    }, [todos])
+
+  const markComplete = (id) => {
+    setTodos(todos.filter(todo => todo.id !== id))
+  }
 
   return(
     <Container fluid>
