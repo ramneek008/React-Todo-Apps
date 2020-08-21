@@ -31,7 +31,7 @@ const App = () => {
   }
 
   return(
-    <Container fluid>
+    <Container>
       <h1>Todo with Local Storage</h1>
       <TodoForm addTodos={addTodos} />
       <Todos todos={todos} markComplete={markComplete} />      
